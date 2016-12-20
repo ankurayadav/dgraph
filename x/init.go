@@ -29,10 +29,11 @@ import (
 const dgraphVersion = "0.7.0"
 
 var (
-	configFile = flag.String("configFile", "", "YAML configuration file containing dgraph settings.")
-	version    = flag.Bool("version", false, "Prints the version of Dgraph")
-	initFunc   []func()
-	logger     *log.Logger
+	configFile = flag.String("configFile", "",
+		"YAML configuration file containing dgraph settings.")
+	version  = flag.Bool("version", false, "Prints the version of Dgraph")
+	initFunc []func()
+	logger   *log.Logger
 )
 
 // AddInit adds a function to be run in x.Init, which should be called at the
